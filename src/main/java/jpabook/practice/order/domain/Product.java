@@ -2,6 +2,7 @@ package jpabook.practice.order.domain;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -19,6 +20,13 @@ public class Product {
     @Embedded
     private Code code;
 
+    public static Product createProduct(String productName, Integer price, Code code) {
+        Product product = new Product();
+        product.productName = productName;
+        product.price = price;
+        product.code = code;
+        return product;
+    }
     public boolean isDuplicated(Product product) {
         return code.equals(product.getCode());
     }

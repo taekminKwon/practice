@@ -10,8 +10,6 @@ public class OrderMapper {
         return Order.createOrder(
                 request.memberId(),
                 product,
-                product.getProductName(),
-                product.getPrice(),
                 request.quantity()
         );
     }

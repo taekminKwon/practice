@@ -31,15 +31,13 @@ public class Order {
     public static Order createOrder(
         Long memberId,
         Product product,
-        String productName,
-        Integer orderPrice,
-        Integer quantity
+        int quantity
     ) {
         Order order = new Order();
         order.product = product;
-        order.productName = productName;;
+        order.productName = product.getProductName();;
         order.memberId = memberId;
-        order.orderPrice = orderPrice;
+        order.orderPrice = product.getPrice();
         order.quantity = quantity;
 
         // 비즈니스 로직을 도메인에서 관리
