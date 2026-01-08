@@ -3,8 +3,6 @@ package jpabook.practice.order.application;
 import jpabook.practice.order.domain.Order;
 import jpabook.practice.order.domain.Product;
 import jpabook.practice.order.dto.*;
-import jpabook.practice.order.infrastructure.OrderReader;
-import jpabook.practice.order.infrastructure.OrderStore;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

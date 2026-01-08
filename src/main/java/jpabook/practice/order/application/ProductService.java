@@ -1,7 +1,6 @@
 package jpabook.practice.order.application;
 
 import jpabook.practice.order.domain.Product;
-import jpabook.practice.order.infrastructure.ProductReader;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -2,19 +2,13 @@ package jpabook.practice;
 
 import jpabook.practice.order.application.OrderService;
 import jpabook.practice.order.domain.Code;
-import jpabook.practice.order.domain.Order;
 import jpabook.practice.order.domain.Product;
 import jpabook.practice.order.dto.OrderCreateDto;
-import jpabook.practice.order.infrastructure.OrderRepository;
-import jpabook.practice.order.infrastructure.OrderStore;
-import jpabook.practice.order.infrastructure.ProductReader;
 import jpabook.practice.order.infrastructure.ProductRepository;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest

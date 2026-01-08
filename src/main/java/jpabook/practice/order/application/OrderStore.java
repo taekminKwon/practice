@@ -1,4 +1,4 @@
-package jpabook.practice.order.infrastructure;
+package jpabook.practice.order.application;
 
 import jpabook.practice.order.domain.Order;
 

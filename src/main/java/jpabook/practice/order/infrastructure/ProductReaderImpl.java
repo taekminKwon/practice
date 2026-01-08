@@ -1,5 +1,6 @@
 package jpabook.practice.order.infrastructure;
 
+import jpabook.practice.order.application.ProductReader;
 import jpabook.practice.order.domain.Product;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
