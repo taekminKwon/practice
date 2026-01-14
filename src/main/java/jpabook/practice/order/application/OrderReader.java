@@ -1,7 +1,7 @@
 package jpabook.practice.order.application;
 
 import jpabook.practice.order.domain.Order;
-import jpabook.practice.order.dto.OrderQuery;
+import jpabook.practice.order.application.query.OrderQuery;
 
 import java.util.List;
 

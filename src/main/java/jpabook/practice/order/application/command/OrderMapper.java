@@ -1,25 +1,27 @@
-package jpabook.practice.order.dto;
+package jpabook.practice.order.application.command;
 
+import jpabook.practice.order.application.query.OrderSummary;
 import jpabook.practice.order.domain.Order;
 import jpabook.practice.order.domain.Product;
 import org.springframework.stereotype.Component;
 
 @Component
 public class OrderMapper {
-    public Order createOrder(OrderCreateDto.Request request, Product product) {
+    public Order createOrder(OrderCommand command, Product product) {
         return Order.createOrder(
-                request.memberId(),
+                command.memberId(),
                 product,
-                request.quantity()
+                command.quantity()
         );
     }
 
-    public OrderCreateDto.Response toDto(Order order) {
-        return new OrderCreateDto.Response(
+    public OrderSummary toDto(Order order) {
+        return new OrderSummary(
+                order.getId(),
                 order.getProduct().getId(),
                 order.getMemberId(),
                 order.getQuantity(),
-                order.getProduct().getPrice(),
+                order.getOrderPrice(),
                 order.getSales()
         );
     }

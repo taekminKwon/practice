@@ -2,9 +2,9 @@ package jpabook.practice.order.presentation;
 
 import jpabook.practice.order.application.OrderFacade;
 import jpabook.practice.order.application.OrderService;
-import jpabook.practice.order.dto.OrderCreateDto;
-import jpabook.practice.order.dto.OrderQuery;
-import jpabook.practice.order.dto.OrderSummary;
+import jpabook.practice.order.presentation.dto.OrderPostDto;
+import jpabook.practice.order.application.query.OrderQuery;
+import jpabook.practice.order.application.query.OrderSummary;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,10 +17,9 @@ public class OrderController {
     private final OrderFacade orderFacade;
     private final OrderService orderService;
 
-    // TODO OrderDto.Response로 할 지, OrderQuery, OrderCommand 분리 후 OrderSummary 등으로 응답할 지 논의
     @PostMapping
-    public OrderCreateDto.Response createOrder(@RequestBody OrderCreateDto.Request request) {
-        return orderFacade.saveOrder(request);
+    public OrderPostDto.Response createOrder(@RequestBody OrderPostDto.Request request) {
+        return OrderPostDto.Response.of(orderFacade.saveOrder(request.toCommand()));
     }
 
 

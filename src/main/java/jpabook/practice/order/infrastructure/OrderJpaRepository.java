@@ -1,7 +1,6 @@
 package jpabook.practice.order.infrastructure;
 
 import jpabook.practice.order.domain.Order;
-import org.aspectj.weaver.ast.Or;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -9,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface OrderRepository extends JpaRepository<Order, Long> {
+public interface OrderJpaRepository extends JpaRepository<Order, Long> {
     // 스냅 샷 컬럼(product name, product price 등등) 이 없을 때는
     @Query("select o " +
             "from Order as o " +

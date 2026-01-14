@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 public class OrderStoreImpl implements OrderStore {
-    private final OrderRepository orderRepository;
+    private final OrderJpaRepository orderJpaRepository;
 
     @Override
     public Order save(Order order) {
-        return orderRepository.save(order);
+        return orderJpaRepository.save(order);
     }
 }

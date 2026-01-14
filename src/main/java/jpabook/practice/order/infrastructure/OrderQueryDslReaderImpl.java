@@ -5,7 +5,7 @@ import com.querydsl.core.util.StringUtils;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import jpabook.practice.order.application.OrderReader;
 import jpabook.practice.order.domain.Order;
-import jpabook.practice.order.dto.OrderQuery;
+import jpabook.practice.order.application.query.OrderQuery;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
