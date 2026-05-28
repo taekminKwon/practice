@@ -4,7 +4,7 @@ spring boot application 동일 패키지 내부에 패키지는 도메인 기준
 (ex : order, product, member 등등)
 
 # 레이어 진행 순서
-presentation  -> application -> infrastructure 로 볼 수 있습니다.
+presentation  -> application -> domain -> infrastructure 로 볼 수 있습니다.
 의존 방향은 단방향이 바람직합니다.
 왜냐하면 application 이 presentation 을 알게 되거나, infrastructure 이 application 등 을 알게 되면 결합도가 올라가게 되고, 관심사의 분리를 못하게 됩니다. 또 양방향으로 개발하게 되면, 순환 참조의 문제가 발생하게 될 수 있기 때문에 되도록이면 지양합니다.
 ex ) dto 를 서비스에서 사용하기보다, dto 를 command, query 등 service 내부에서 사용하는 어떤 클래스로 변환하여 service 에 전달. 이렇게 하면 service 는 외부 통신에 신경 쓰지 않고 비즈니스 로직에만 집중하면 됩니다.
